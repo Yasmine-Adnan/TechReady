@@ -1,0 +1,15 @@
+# Android build
+QuizApp_Adnan/build/
+QuizApp_Adnan/.gradle/
+QuizApp_Adnan/app/build/
+QuizApp_Adnan/.git/
+
+# Backend build
+TechReady-Backend/target/
+TechReady-Backend/.git/
+
+# Secrets
+**/local.properties
+**/google-services.json
+**/application.properties
+**/serviceAccountKey.json
