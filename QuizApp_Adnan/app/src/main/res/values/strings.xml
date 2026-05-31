@@ -1,0 +1,11 @@
+<resources>
+    <!-- On garde impérativement le nom imposé pour le projet académique -->
+    <string name="app_name">QuizApp_Adnan</string>
+    
+    <!-- Textes globaux (exemple de bonne pratique de centralisation) -->
+    <string name="action_next">Suivant</string>
+    <string name="action_previous">Précédent</string>
+    <string name="action_submit">Valider</string>
+    <string name="action_home">Retour à l\'accueil</string>
+    <string name="error_network">Erreur de connexion. Veuillez réessayer.</string>
+</resources>

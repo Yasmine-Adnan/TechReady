@@ -1,0 +1,43 @@
+# ===========================
+# FICHIERS SENSIBLES — NE JAMAIS COMMIT
+# ===========================
+
+# Clés API locales (SDK path + MAPS_API_KEY)
+local.properties
+
+# Firebase config (contient une vraie clé API Firebase)
+app/google-services.json
+
+# ===========================
+# ANDROID / GRADLE
+# ===========================
+*.iml
+.gradle
+/build
+app/build
+/captures
+.externalNativeBuild
+.cxx
+
+# ===========================
+# ANDROID STUDIO / IDEA
+# ===========================
+/.idea/caches
+/.idea/libraries
+/.idea/modules.xml
+/.idea/workspace.xml
+/.idea/navEditor.xml
+/.idea/assetWizardSettings.xml
+.DS_Store
+
+# ===========================
+# LOGS DE CRASH JVM
+# ===========================
+hs_err_pid*.log
+replay_pid*.log
+
+# ===========================
+# KEYSTORE (NE JAMAIS COMMIT)
+# ===========================
+*.jks
+*.keystore

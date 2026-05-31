@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rowContainer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:background="@android:color/transparent"
+    android:padding="12dp"
+    android:layout_marginBottom="2dp">
+
+    <!-- Rang -->
+    <TextView
+        android:id="@+id/rankTextView"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:background="@drawable/circle_background_primary"
+        android:gravity="center"
+        android:text="4"
+        android:textColor="#FFFFFF"
+        android:textSize="13sp"
+        android:textStyle="bold" />
+
+    <!-- Avatar -->
+    <TextView
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="10dp"
+        android:background="@drawable/bg_avatar_circle"
+        android:gravity="center"
+        android:text="👤"
+        android:textSize="20sp" />
+
+    <!-- Nom + spécialité + niveau -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginStart="10dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/nameTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nom Prénom"
+            android:textColor="#1A1D3A"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:maxLines="1"
+            android:ellipsize="end" />
+
+        <TextView
+            android:id="@+id/specialiteTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:text="Spécialité • Niveau 1"
+            android:textColor="#9EA3C0"
+            android:textSize="12sp"
+            android:maxLines="1"
+            android:ellipsize="end" />
+    </LinearLayout>
+
+    <!-- Points -->
+    <TextView
+        android:id="@+id/pointsTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="1 200 pts"
+        android:textColor="#5C6BC0"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+
+</LinearLayout>

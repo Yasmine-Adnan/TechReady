@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EEEAF8"
+    tools:context=".ui.flashcards.FlashcardsFragment">
+
+    <!-- ═══════════════════════════════════════════
+         ZONE 0 — Titre TechReady
+    ══════════════════════════════════════════════ -->
+    <TextView
+        android:id="@+id/tvAppTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:text="TechReady"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="#1A1040"
+        android:letterSpacing="0.01"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- ═══════════════════════════════════════════
+         ZONE 1 — Chips de catégories (scroll horizontal)
+    ══════════════════════════════════════════════ -->
+    <HorizontalScrollView
+        android:id="@+id/chipScrollView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:scrollbars="none"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvAppTitle">
+
+        <LinearLayout
+            android:id="@+id/chipContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <!-- Chip : Architecture (sélectionnée par défaut) -->
+            <TextView
+                android:id="@+id/chipArchitecture"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Architecture"
+                android:textSize="13sp"
+                android:textColor="#FFFFFF"
+                android:background="@drawable/bg_chip_selected"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:paddingStart="18dp"
+                android:paddingEnd="18dp"
+                android:layout_marginEnd="8dp" />
+
+            <!-- Chip : Algorithms -->
+            <TextView
+                android:id="@+id/chipAlgorithms"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Algorithms"
+                android:textSize="13sp"
+                android:textColor="#2D2D3A"
+                android:background="@drawable/bg_chip_normal"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:paddingStart="18dp"
+                android:paddingEnd="18dp"
+                android:layout_marginEnd="8dp" />
+
+            <!-- Chip : Data Structures -->
+            <TextView
+                android:id="@+id/chipDataStructures"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Data Structures"
+                android:textSize="13sp"
+                android:textColor="#2D2D3A"
+                android:background="@drawable/bg_chip_normal"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:paddingStart="18dp"
+                android:paddingEnd="18dp"
+                android:layout_marginEnd="8dp" />
+
+            <!-- Chip : System Design -->
+            <TextView
+                android:id="@+id/chipSystemDesign"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="System Design"
+                android:textSize="13sp"
+                android:textColor="#2D2D3A"
+                android:background="@drawable/bg_chip_normal"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:paddingStart="18dp"
+                android:paddingEnd="18dp"
+                android:layout_marginEnd="8dp" />
+
+            <!-- Chip : POO -->
+            <TextView
+                android:id="@+id/chipPOO"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="POO"
+                android:textSize="13sp"
+                android:textColor="#2D2D3A"
+                android:background="@drawable/bg_chip_normal"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:paddingStart="18dp"
+                android:paddingEnd="18dp"
+                android:layout_marginEnd="8dp" />
+
+            <!-- Chip : Git -->
+            <TextView
+                android:id="@+id/chipGit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Git"
+                android:textSize="13sp"
+                android:textColor="#2D2D3A"
+                android:background="@drawable/bg_chip_normal"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:paddingStart="18dp"
+                android:paddingEnd="18dp"
+                android:layout_marginEnd="8dp" />
+
+            <!-- Chip : SQL -->
+            <TextView
+                android:id="@+id/chipSQL"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SQL"
+                android:textSize="13sp"
+                android:textColor="#2D2D3A"
+                android:background="@drawable/bg_chip_normal"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:paddingStart="18dp"
+                android:paddingEnd="18dp"
+                android:layout_marginEnd="8dp" />
+
+            <!-- Chip : Spring Boot -->
+            <TextView
+                android:id="@+id/chipSpringBoot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Spring Boot"
+                android:textSize="13sp"
+                android:textColor="#2D2D3A"
+                android:background="@drawable/bg_chip_normal"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:paddingStart="18dp"
+                android:paddingEnd="18dp" />
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <!-- ═══════════════════════════════════════════
+         ZONE 2 — Carte principale (glassmorphism)
+         FrameLayout pour empiler spots + cartes
+    ══════════════════════════════════════════════ -->
+    <FrameLayout
+        android:id="@+id/cardContainer"
+        android:layout_width="0dp"
+        android:layout_height="380dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/chipScrollView">
+
+        <!-- Spot bleu (haut-gauche) -->
+        <View
+            android:id="@+id/spotBlue"
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            android:layout_gravity="top|start"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="-20dp"
+            android:background="@drawable/bg_color_spot_blue"
+            android:alpha="0.45" />
+
+        <!-- Spot rose (centre-droite) -->
+        <View
+            android:id="@+id/spotPink"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_gravity="center_vertical|end"
+            android:layout_marginEnd="-20dp"
+            android:background="@drawable/bg_color_spot_pink"
+            android:alpha="0.45" />
+
+        <!-- Spot vert (bas-centre) -->
+        <View
+            android:id="@+id/spotGreen"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="bottom|center_horizontal"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/bg_color_spot_green"
+            android:alpha="0.35" />
+
+        <!-- ═══════ CARD BACK (Réponse) ═══════ -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardBack"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:alpha="0"
+            app:cardCornerRadius="28dp"
+            app:cardElevation="8dp"
+            app:cardBackgroundColor="@android:color/transparent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:padding="28dp"
+                android:background="@drawable/bg_flashcard">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="RÉPONSE"
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    android:textColor="#9CA3AF"
+                    android:letterSpacing="0.15"
+                    android:layout_marginBottom="20dp" />
+
+                <TextView
+                    android:id="@+id/tvAnswer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="La réponse s'affichera ici..."
+                    android:textSize="18sp"
+                    android:textColor="#2D2D3A"
+                    android:gravity="center"
+                    android:lineSpacingMultiplier="1.4" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- ═══════ CARD FRONT (Question) ═══════ -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardFront"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:cardCornerRadius="28dp"
+            app:cardElevation="8dp"
+            app:cardBackgroundColor="@android:color/transparent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:padding="28dp"
+                android:background="@drawable/bg_flashcard">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="QUESTION"
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    android:textColor="#9CA3AF"
+                    android:letterSpacing="0.15"
+                    android:layout_marginBottom="20dp" />
+
+                <TextView
+                    android:id="@+id/tvQuestion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Chargement de la question..."
+                    android:textSize="26sp"
+                    android:textStyle="bold"
+                    android:textColor="#1A1040"
+                    android:gravity="center"
+                    android:lineSpacingMultiplier="1.2" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    </FrameLayout>
+
+    <!-- ═══════════════════════════════════════════
+         ZONE 3 — Actions swipe (À revoir / Maîtrisé)
+    ══════════════════════════════════════════════ -->
+    <LinearLayout
+        android:id="@+id/swipeActionsLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="24dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cardContainer">
+
+        <!-- "← À revoir 🔄" -->
+        <TextView
+            android:id="@+id/btnNext"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="← À revoir 🔄"
+            android:textSize="14sp"
+            android:textColor="#EF4444"
+            android:gravity="start|center_vertical"
+            android:padding="8dp"
+            android:clickable="true"
+            android:focusable="true" />
+
+        <!-- "Maîtrisé ✅ →" -->
+        <TextView
+            android:id="@+id/btnMastered"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Maîtrisé ✅ →"
+            android:textSize="14sp"
+            android:textColor="#22C55E"
+            android:gravity="end|center_vertical"
+            android:padding="8dp"
+            android:clickable="true"
+            android:focusable="true" />
+
+    </LinearLayout>
+
+    <!-- ═══════════════════════════════════════════
+         ZONE 4 — Compteur pill
+    ══════════════════════════════════════════════ -->
+    <TextView
+        android:id="@+id/tvCategory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="0/0 — 0 maîtrisées"
+        android:textSize="13sp"
+        android:textColor="#7C7C99"
+        android:background="@drawable/bg_counter_pill"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/swipeActionsLayout" />
+
+    <!-- ═══════════════════════════════════════════
+         État vide (toutes les cartes maîtrisées)
+    ══════════════════════════════════════════════ -->
+    <LinearLayout
+        android:id="@+id/emptyStateContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tvEmptyState"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🎉 Bravo ! Vous avez maîtrisé toutes les cartes."
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#1A1040"
+            android:textAlignment="center"
+            android:paddingStart="24dp"
+            android:paddingEnd="24dp"
+            android:layout_marginBottom="24dp" />
+
+        <Button
+            android:id="@+id/btnReset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Recommencer"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#8B5CF6" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

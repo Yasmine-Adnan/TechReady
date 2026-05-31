@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F4F5FA"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:paddingBottom="32dp">
+
+        <!-- ══════════════════════════════════════════ -->
+        <!--  TOP BAR: ← Résultat de l'entretien ↑     -->
+        <!-- ══════════════════════════════════════════ -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginBottom="24dp">
+
+            <ImageButton
+                android:id="@+id/ibBack"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentStart="true"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@android:drawable/ic_media_previous"
+                android:tint="#5C6BC0"
+                android:contentDescription="Retour" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="Résultat de l'entretien"
+                android:textColor="#1A1D3A"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif-medium" />
+
+            <ImageButton
+                android:id="@+id/ibShare"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@android:drawable/ic_menu_share"
+                android:tint="#5C6BC0"
+                android:contentDescription="Partager" />
+        </RelativeLayout>
+
+        <!-- ══════════════════════════════════════════ -->
+        <!--  SECTION 1 — Circular score gauge          -->
+        <!-- ══════════════════════════════════════════ -->
+        <com.example.quizapp_adnan.ui.result.ScoreRingView
+            android:id="@+id/scoreRingView"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="20dp" />
+
+        <!-- ══════════════════════════════════════════ -->
+        <!--  SECTION 2 — Performance label             -->
+        <!-- ══════════════════════════════════════════ -->
+        <TextView
+            android:id="@+id/tvPerformanceLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:gravity="center"
+            android:text="Analyse en cours..."
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-medium"
+            android:textColor="#7B8FFF" />
+
+        <!-- ══════════════════════════════════════════ -->
+        <!--  SECTION 3 — AI Feedback card              -->
+        <!-- ══════════════════════════════════════════ -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardAiFeedback"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            app:cardBackgroundColor="#FFFFFF"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp"
+            app:strokeWidth="0dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <!-- Left accent border (4dp wide, gradient-purple) -->
+                <View
+                    android:layout_width="4dp"
+                    android:layout_height="match_parent"
+                    android:background="#7B8FFF" />
+
+                <!-- Card content -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <!-- Header row: robot emoji + title -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginBottom="12dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="🤖"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:text="Analyse IA Gemini"
+                            android:textColor="#5C6BC0"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:fontFamily="sans-serif-medium" />
+                    </LinearLayout>
+
+                    <!-- AI loading spinner -->
+                    <ProgressBar
+                        android:id="@+id/pbAILoading"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginBottom="8dp"
+                        android:visibility="visible" />
+
+                    <!-- Gemini feedback text -->
+                    <TextView
+                        android:id="@+id/tvMessage"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Génération du feedback personnalisé en cours..."
+                        android:textColor="#444444"
+                        android:textSize="14sp"
+                        android:lineSpacingMultiplier="1.4"
+                        android:textAlignment="viewStart" />
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- ══════════════════════════════════════════ -->
+        <!--  SECTION 4 — Action buttons (side by side) -->
+        <!-- ══════════════════════════════════════════ -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp">
+
+            <!-- Left: "Reprendre la pratique" — gradient -->
+            <Button
+                android:id="@+id/bHome"
+                android:layout_width="0dp"
+                android:layout_height="52dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="8dp"
+                android:text="Reprendre"
+                android:textColor="#FFFFFF"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:background="@drawable/bg_button_gradient"
+                android:backgroundTint="@null"
+                android:stateListAnimator="@null"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp" />
+
+            <!-- Right: "Voir le rapport détaillé" — outlined -->
+            <Button
+                android:id="@+id/bHistory"
+                android:layout_width="0dp"
+                android:layout_height="52dp"
+                android:layout_weight="1"
+                android:layout_marginStart="8dp"
+                android:text="Rapport détaillé"
+                android:textColor="#7B8FFF"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:background="@drawable/bg_button_outlined"
+                android:backgroundTint="@null"
+                android:stateListAnimator="@null"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

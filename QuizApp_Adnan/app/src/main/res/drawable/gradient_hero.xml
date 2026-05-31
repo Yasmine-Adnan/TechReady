@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <gradient
+        android:startColor="#A8C8F8"
+        android:endColor="#C9B8F0"
+        android:angle="0"
+        android:type="linear" />
+    <!-- Les coins inférieurs arrondis donnent cet effet "vague" moderne -->
+    <corners
+        android:bottomLeftRadius="36dp"
+        android:bottomRightRadius="36dp" />
+</shape>

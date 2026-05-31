@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Nouvelles couleurs pastel -->
+    <color name="primary">#A8C8F8</color>
+    <color name="secondary">#C9B8F0</color>
+    <color name="background">#F8F7FF</color>
+    <color name="surface">#FFFFFF</color>
+    <color name="accent">#DDD6FE</color>
+    <color name="text_primary">#2D2D3A</color>
+    <color name="text_secondary">#7C7C99</color>
+    <color name="error">#FFB3B3</color>
+    <color name="success">#B3F0D4</color>
+
+    <!-- Compatibilité avec les anciens layouts existants -->
+    <color name="colorPrimary">@color/primary</color>
+    <color name="colorPrimaryDark">@color/primary</color>
+    <color name="colorPrimaryVariant">@color/primary</color>
+    <color name="colorAccent">@color/accent</color>
+    <color name="colorBackground">@color/background</color>
+    <color name="colorSurface">@color/surface</color>
+    <color name="colorCardBackground">@color/surface</color>
+    <color name="colorText">@color/text_primary</color>
+    <color name="colorTextMuted">@color/text_secondary</color>
+    <color name="colorWrong">@color/error</color>
+    <color name="colorCorrect">@color/success</color>
+    <color name="colorSuccess">@color/success</color>
+    <color name="colorError">@color/error</color>
+    <color name="colorButtonPrimary">@color/primary</color>
+    <color name="colorButtonText">#FFFFFF</color>
+    <color name="colorSecondary">@color/secondary</color>
+    <color name="colorTimer">@color/text_primary</color>
+
+    <!-- Bottom nav pill icon/text colors -->
+    <color name="nav_active_icon">#4A90D9</color>
+    <color name="nav_inactive_icon">#9CA3AF</color>
+    <color name="nav_active_indicator">#EEE9FF</color>
+
+</resources>

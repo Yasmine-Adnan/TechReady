@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/homeFragment"
+        android:icon="@drawable/ic_launcher_foreground"
+        android:title="Accueil" />
+    <item
+        android:id="@+id/flashcardsFragment"
+        android:icon="@drawable/ic_launcher_foreground"
+        android:title="Flashcards" />
+    <item
+        android:id="@+id/progressFragment"
+        android:icon="@drawable/ic_launcher_foreground"
+        android:title="Progression" />
+    <item
+        android:id="@+id/leaderboardFragment"
+        android:icon="@drawable/ic_launcher_foreground"
+        android:title="Classement" />
+    <item
+        android:id="@+id/profileFragment"
+        android:icon="@drawable/ic_launcher_foreground"
+        android:title="Profil" />
+</menu>
