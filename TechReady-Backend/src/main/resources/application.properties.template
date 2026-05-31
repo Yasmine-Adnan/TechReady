@@ -1,0 +1,9 @@
+## application.properties — TEMPLATE
+## Copiez ce fichier en application.properties et remplissez vos valeurs réelles.
+## Ce fichier NE doit PAS être commité sur Git.
+
+server.port=8080
+spring.application.name=techready-backend
+
+# Clé API Gemini (obtenez-la sur https://aistudio.google.com/app/apikey)
+gemini.api.key=VOTRE_CLE_GEMINI_ICI

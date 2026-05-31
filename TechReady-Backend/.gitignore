@@ -1,0 +1,32 @@
+# ===========================
+# FICHIERS SENSIBLES — NE JAMAIS COMMIT
+# ===========================
+
+# Configuration avec clé Gemini API
+src/main/resources/application.properties
+
+# Credentials Firebase Admin SDK
+src/main/resources/*.json
+serviceAccountKey.json
+firebase-adminsdk*.json
+
+# ===========================
+# MAVEN / BUILD
+# ===========================
+target/
+*.class
+
+# ===========================
+# LOGS
+# ===========================
+hs_err_pid*.log
+replay_pid*.log
+*.log
+
+# ===========================
+# FICHIERS DE TEST LOCAUX
+# ===========================
+TestGemini.java
+TestGemini.class
+test_gemini.py
+payload.json
